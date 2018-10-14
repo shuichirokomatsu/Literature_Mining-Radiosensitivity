@@ -3,7 +3,7 @@ Authors: Shuichiro Komatsu, Takahiro Oike
 
 Provides programs for mining in vitro radiosensitivity data in scientific publications. These programs are described in our paper, "Computer-aided data mining method for in vitro radiosensitivity".
 
-![overview_figure1](https://github.com/shuichirokomatsu/mining-for-in-vitro-radiosensitivity/blob/master/Figure1.png)
+![overview_figure1](https://github.com/shuichirokomatsu/Literature_Mining-Radiosensitivity/blob/master/Figure1.png)
 
 ## Classifier #1 
 	Detects and extract line graphs and bar graphs used in scientific publications. This program is implemented by Google Tensorflow Object Detection API (https://github.com/tensorflow/models/tree/master/research/object_detection). 
