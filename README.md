@@ -1,7 +1,7 @@
 ﻿# Deep learning–assisted literature mining for in vitro radiosensitivity data
 Authors: Shuichiro Komatsu, Takahiro Oike
 
-Provides programs for mining in vitro radiosensitivity data in scientific publications. These programs are described in our paper, "Computer-aided data mining method for in vitro radiosensitivity".
+Provides programs for mining in vitro radiosensitivity data in scientific publications. These programs are described in our paper, "Deep learning-assisted literature mining for in vitro radiosensitivity data".
 
 ![overview_figure1](https://github.com/shuichirokomatsu/Literature_Mining-Radiosensitivity/blob/master/Figure1.png)
 
@@ -17,3 +17,9 @@ Move pdf page images into the \pictures folder. Run the "VGG16_classifier.py" an
 ## Classifier #3
 Detects keywords indicative of radiosensitivity experiments, i.e., "Gy", "survival fraction(s)", or "surviving fraction(s)" contained in image data. You have to prepare your own Google Cloud Vision API key. 
 Move the images extracted by above the first program into the \data folder. Change the API key variable in the "OCR.py". Run the "OCR.py" and you can find the key word count list in images.
+
+## iSF2
+
+![overview_iSF2](https://github.com/shuichirokomatsu/Literature_Mining-Radiosensitivity/blob/master/iSF2_overview.png)
+
+We developed a program, namely iSF2, that identifies SF2, surviving fraction after 2-Gy irradiation, from figures showing semi-logarithmic survival curves. We built iSF2 by combining Mask RCNN, a deep CNN model for object detection and segmentation, OCR and NumPy, a library of Python. Mask RCNN extracts a semi-logarithmic survival curve, X axis, and Y axis from a figure; OCR identifies the axis labels; Numpy calculates SF2 based on these data extracted by Mask RCNN and OCR.

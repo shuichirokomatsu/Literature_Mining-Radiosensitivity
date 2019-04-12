@@ -1,0 +1,8 @@
+item {
+   id: 1
+   name: 'L-axis'
+}
+item {
+   id: 2
+   name: 'curve'
+}
